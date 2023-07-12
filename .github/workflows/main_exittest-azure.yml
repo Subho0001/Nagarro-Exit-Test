@@ -22,7 +22,7 @@ jobs:
           java-version: '17'
 
       - name: Build with Maven
-        run: mvn clean install -DskipTests
+        run: mvn clean install
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'exittest-azure'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BF97CDC1528649E6BC4B10AB2273F3D3 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_158E0E75CB984AEA8F6AE83ABE8E2F8B }}
           package: '*.jar'
